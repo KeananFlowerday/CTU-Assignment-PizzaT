@@ -30,7 +30,7 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
 			{
 				using (PizzatoriumDB db = new PizzatoriumDB())
 				{
-					User obj = db.Users.Where(a => a.Username.Equals(_user.Username) && a.Password.Equals(_user.Password)).FirstOrDefault();
+					User obj = db.Users.Where(a => a.Username.ToLower().Equals(_user.Username.ToLower()) && a.Password.Equals(_user.Password)).FirstOrDefault();
 					if (obj != null)
 					{
                         Session["User"] = obj;
