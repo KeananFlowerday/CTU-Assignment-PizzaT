@@ -1,0 +1,61 @@
+﻿@using IPG512F1_Keanan_Flowerday.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - The Pizzatorium</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color : darkred">
+        <figure>
+            <img style="width : 20%;
+                                height: 75%;
+
+                                position: absolute;
+                                left: -20px;
+                                top: 0px;"
+                 src="~/Content/Assets/Images/Welcometo.png" alt="Pizzatorium Logo" />
+            <!-- <figcaption>Pizzatorium Logo</figcaption> -->
+        </figure>
+        <div class="container">
+            <div class="jumbotron" style=" z-index : -1; background-color : lightgrey; position: relative; top : 20px; ">
+
+                <figure>
+                    <img style="width : 25%;
+                                height: 100%;
+
+                                position: absolute;
+                                left: -75px;
+                                top: 0px;"
+                         src="~/Content/Assets/Images/0fc9fafba4c13424f047e9fd3aa98de3.png" alt="Pizzatorium Logo" />
+                    <!-- <figcaption>Pizzatorium Logo</figcaption> -->
+                </figure>
+                <figure style="position: relative;left: 20%;">
+                    <img style=" z-index: 1;  align-self : center " src="~/Content/Assets/Images/Title.png" alt="The Pizzatorium - Title" />
+                </figure>
+            </div>
+            @if ((bool)Session["IsLoggedIn"])
+            {
+
+                    <div style="z-index : 1; position : absolute; left : 85%; top: 20px;" class="label rcorners1">Hello, @(((User)Session["User"]).Name)</div>
+
+            }
+        </div>
+</div>
+<div class="container body-content" style="position: relative; top : 170px;">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - The Pizzatorium co.</p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
