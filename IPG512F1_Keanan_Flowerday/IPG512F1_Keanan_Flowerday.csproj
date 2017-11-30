@@ -192,7 +192,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PizzasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,6 +288,16 @@
     <Content Include="Views\Admin\UserDetails.cshtml" />
     <Content Include="Views\Home\Design.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Ingredients\Create.cshtml" />
+    <Content Include="Views\Ingredients\Delete.cshtml" />
+    <Content Include="Views\Ingredients\Details.cshtml" />
+    <Content Include="Views\Ingredients\Edit.cshtml" />
+    <Content Include="Views\Ingredients\Index.cshtml" />
+    <Content Include="Views\Pizzas\Create.cshtml" />
+    <Content Include="Views\Pizzas\Delete.cshtml" />
+    <Content Include="Views\Pizzas\Details.cshtml" />
+    <Content Include="Views\Pizzas\Edit.cshtml" />
+    <Content Include="Views\Pizzas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

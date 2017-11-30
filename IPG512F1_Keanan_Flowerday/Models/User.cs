@@ -51,7 +51,16 @@ namespace IPG512F1_Keanan_Flowerday.Models
             // this.FavPizza = _user.FavPizza ?? this.FavPizza;
             this.Password = _user.Password ?? this.Password;
         }
-        #endregion
+
+        public bool Validate(User _user)
+        {
+            if (this.Username.ToLower() != _user.Username.ToLower())
+                return false;
+            if (this.Password != _user.Password)
+                return false;
+
+            return true;
+        }
 
         public string NameToString()
         {
@@ -60,6 +69,9 @@ namespace IPG512F1_Keanan_Flowerday.Models
             //else
             return this.Name;
         }
+        #endregion
+
+
 
 
     }
