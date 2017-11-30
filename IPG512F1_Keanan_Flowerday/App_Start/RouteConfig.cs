@@ -13,22 +13,14 @@ namespace IPG512F1_Keanan_Flowerday
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-			routes.MapRoute(
-				name: "Home",
-				url: "{controller}/{action}/{id}",
-				defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional }
-			);
+          
+           
 
-			routes.MapRoute(
-				name: "Admin",
-				url: "{controller}/{action}/{id}",
-				defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
-			);
 
-			routes.MapRoute(
+            routes.MapRoute(
 				name: "Default",
 				url: "{controller}/{action}/{id}",
-				defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional }
+				defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
 			);
 		}
 	}

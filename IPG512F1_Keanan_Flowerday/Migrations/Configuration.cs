@@ -27,6 +27,17 @@ namespace IPG512F1_Keanan_Flowerday.Migrations
 
 			});
 
+            //context.Users.AddOrUpdate(new Models.User
+            //{
+            //    ID = 2,
+            //    Username = "KFlowerday",
+            //    Password = "KFlowerday",
+            //    Name = "Keanan",
+            //    Surname = "Flowerday",
+            //    Roles = new System.Collections.Generic.List<int> {0}
+
+            //});
+
             context.Ingredients.AddOrUpdate(i => i.ID,
       new Ingredient { ID = 23, Name = "Plain Base", SmallPrice = 7.00f, MediumPrice = 11.00f, LargePrice = 15.00f },
       new Ingredient { ID = 1, Name = "Tomato Base", SmallPrice = 7.00f, MediumPrice = 11.00f, LargePrice = 15.00f },

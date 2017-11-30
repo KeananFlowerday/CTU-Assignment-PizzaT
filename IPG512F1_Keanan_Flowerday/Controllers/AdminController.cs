@@ -36,6 +36,7 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
 			}
 
 			PizzatoriumDB db = new PizzatoriumDB();
+            _user.Roles = new List<int> {0};
 			db.Users.Add(_user);
 
 			db.SaveChanges();

@@ -11,7 +11,10 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
     {
         // GET: Home
 
-       
+       public ActionResult  Index()
+        {
+            return RedirectToAction("Login");
+        }
 
 		public ActionResult Login()
 		{

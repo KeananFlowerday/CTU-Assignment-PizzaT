@@ -8,7 +8,7 @@ namespace IPG512F1_Keanan_Flowerday
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+           
         }
     }
 }

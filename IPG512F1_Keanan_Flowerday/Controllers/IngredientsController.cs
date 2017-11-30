@@ -16,7 +16,7 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
         private PizzatoriumDB db = new PizzatoriumDB();
 
         // GET: Ingredients
-        [AllowAnonymous]
+        [UserAuth(RequiredRoles = new int[] { 0 })]
         public ActionResult Index()
         {
             return View(db.Ingredients.ToList());

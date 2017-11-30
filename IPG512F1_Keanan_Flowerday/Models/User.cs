@@ -37,7 +37,7 @@ namespace IPG512F1_Keanan_Flowerday.Models
             }
         }
 
-        private string UserRoles { get; set; } = "";
+        public string UserRoles { get; set; }
         #endregion
 
 
