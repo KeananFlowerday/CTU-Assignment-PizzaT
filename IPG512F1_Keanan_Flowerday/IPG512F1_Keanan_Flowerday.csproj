@@ -197,6 +197,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Delivery.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Pizza.cs" />
@@ -274,6 +275,7 @@
     <Content Include="Views\Pizzas\Details.cshtml" />
     <Content Include="Views\Pizzas\Edit.cshtml" />
     <Content Include="Views\Pizzas\Index.cshtml" />
+    <Content Include="Views\Home\Final.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<IPG512F1_Keanan_Flowerday.Models.Ingredient>
+
+@{
+    ViewBag.Title = "Final";
+}
+
+<h2>Final</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SmallPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediumPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LargePrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmallPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediumPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LargePrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

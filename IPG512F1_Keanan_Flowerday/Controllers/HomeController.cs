@@ -66,5 +66,22 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
 				return RedirectToAction("Login");
 			}
 		}
+		[HttpPost]
+		public ActionResult Design(Pizza _pizza)
+		{
+			return RedirectToAction("Final");
+		}
+
+		public ActionResult Final()
+		{
+			if ((bool)Session["IsLoggedIn"])
+			{
+				return View();
+			}
+			else
+			{
+				return RedirectToAction("Login");
+			}
+		}
 	}
 }
