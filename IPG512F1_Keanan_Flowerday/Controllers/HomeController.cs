@@ -59,7 +59,11 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
 		{
 			if ((bool)Session["IsLoggedIn"])
 			{
-				return View();
+				using (PizzatoriumDB db = new PizzatoriumDB())
+				{
+					ViewBag.Ingredients = db.Ingredients.ToList();
+					return View();
+				}
 			}
 			else
 			{
@@ -67,9 +71,11 @@ namespace IPG512F1_Keanan_Flowerday.Controllers
 			}
 		}
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public ActionResult Design(Pizza _pizza)
 		{
-			return RedirectToAction("Final");
+			
+				return RedirectToAction("Final");
 		}
 
 		public ActionResult Final()

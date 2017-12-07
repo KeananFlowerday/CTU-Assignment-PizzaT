@@ -24,7 +24,7 @@ namespace IPG512F1_Keanan_Flowerday
 					  "~/Scripts/respond.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
-					  "~/Content/bootstrap.css",
+					  "~/Content/Darkly.css",
 					  "~/Content/Site.css"));
 		}
 	}
